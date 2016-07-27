@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+#RewriteBase /sma.loc/public_html/
+RewriteCond $1 !^(index\.php|assets|install|update) 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# For godady Shared Hosting Server uncomment the line below
+# RewriteRule ^(.*)$ index.php?/$1 [L]
+
+# Please comment this if you have uncommented the above
+RewriteRule ^(.*)$ index.php/$1 [NC,L,QSA]
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /theme/errors/html/error_404.php
+</IfModule> 

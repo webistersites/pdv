@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simple POS is PHP and jQuery based web application. Simple POS is suitable for small and medium businesses/organization who can't afford expense solutions to manage their businesses.">
+    <title>Simple POS Documentation</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <div class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand">Simple POS Guide</a>
+                  <button href="#menu-toggle" id="menu-toggle" type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                <li><a target="_blank" href="http://support.tecdiary.com/">Paid Support</a></li>
+                <li><a target="_blank" href="http://codecanyon.net/item/simple-pos-point-of-sale-made-easy/3947976?ref=Tecdiary">Buy Simple POS</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav nav">
+            <li class="sidebar-brand"><a href="#">SimplePOS Guide</a></li>
+            <li><a class="scroll-to" href="#install">Install Guide</a></li>
+            <li><a class="scroll-to" href="#update">Update Guide</a></li>
+            <li><a class="scroll-to" href="#hardware">Hardware</a></li>
+            <li><a class="scroll-to" href="#demo">Demo</a></li>
+            <li><a class="scroll-to" href="#credit">Credits</a></li>
+            <li><a class="scroll-to" href="#faqs">FAQs</a></li>
+            <li><a class="scroll-to" href="#guide">User Guide</a></li>
+            <li><a class="scroll-to" href="#others">Others</a></li>
+        </ul>
+    </div>
+
+
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="jumbotron">
+                        <h1 class="text-center">Simple POS - Point of Sale Made Easy</h1>
+                        <p class="text-center">Simple POS is PHP and jQuery based web application.</p>
+                        <p class="text-center">Documentation Version 1.0.1</p>
+                    </div>
+                    <div class="well">
+                        <p><strong>Public Beta</strong></p>
+                        <p>
+                            Due to the large number of changes to v4 we have decided to release it as a beta to collect user feedback. Please note that during this period based on user feedback we may make some changes to improve the item. <em>Update tool is not yet available and will be added soon.</em>
+                        </p>
+                    </div>
+
+                    <div class="set" id="install">
+                        <div class="set-description">
+                            <h3>Installation Instruction</h3>
+                            <p>Requirements: Apache 2.2+, Mysql 5.4+, PHP 5.3+ </p>
+                            <ol>
+                                <li>Copy/Upload the folder and files to your web server using cPanel or FTP</li>
+                                <li>If you are installing in sub folder, please make sure there is no space in folder names</li>
+                                <li>Create mysql database, database user and grant all permission to user for this database.</li>
+                                <li>Open the <strong><code>http://yourdomain.com/pathtoupload/install/index.php</code></strong></li>
+                                <li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
+                                <li>Step2: Provide you Envato Username and Purchase Code to validate the purchase.</li>
+                                <li>Step 3: Provide the database host, database user, database password and database name to proceed to next step. <code>Please make sure you don't have $ sign in your password.</code></li>
+                                <li>Step 4: Site Config: Please Fill in you Simple POS Base URL and select your timezone. <code>You must check the site url as installer might guess it wrong</code>
+                                    <ul>
+                                        <li>Base URL for public_html or www/htdocs folder will be <code>http://yourdomain.com/</code> or <code>http://localhost/</code></li>
+                                        <li>Base URL for sub-domain will be <code>http://subdomain.yourdomain.com/</code> </li>
+                                        <li>Base URL for sub-folder will be <code>http://yourdomain.com/subfolder/</code> or <code>http://localhost/subfolder/</code> </li>
+                                        <li>Base URL must not have space and it should end with a trailing slash</li>
+                                    </ul>
+                                </li>
+                                <li>If everything goes smooth, you will be redirect to final page with login details.</li>
+                                <li>Remove the install folder before start using the Simple POS.</li>
+                                <li>Login using default username and password. You should can add new admin account before deleting/editing default account.</li>
+                            </ol>
+                            <h4>Request Installation</h4>
+                            <p>We will provide the service to install the item for $10 To request the installation, please send $10 to saleem@tecdiary.com by Paypal or Skrill and email us your license file and hosting control panel details with reference of your payment to support@tecdiary.com</p>
+                        </div>
+                    </div>
+
+                    <div class="set" id="update">
+                        <div class="set-description">
+                            <h3>Updating from V3</h3>
+                            <div class="highlight">
+                            <p class="intro">We have added the update tool for testing purpose and feedback only. If you are advance user and have good command and experience of backup/restore (files & database) then you can try this update tool.</p>
+                            <p>Please don't try this on your production version. Backup and restore the production version to different location and then try to update that. We are not providing any support for this at least for this version.</p>
+                            </div>
+                            <h4>Please follow these steps to update from v3.x to beta v4.0</h4>
+                            <ol>
+                                <li><strong>Backup all your files and database.</strong> Save/download the backup. <strong>(MUST)</strong></li>
+                                <li>Save/download database config file (<code>spos/config/database.php</code>) on your computer</li>
+                                <li>Delete all old files/folders except <strong>assets/uploads</strong> as your product images and other upload data is in this <strong>assets/uploads</strong>.</li>
+                                <li>Upload all the new files/folders (from your downloaded file).</li>
+                                <li>Move all the contents of <strong>assets/uploads/</strong> to newly uploaded <strong>uploads/</strong> folder.</li>
+                                <li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>app/config/database.php</code>) form the locally saved copy of database config file in step 2. <code>You need to update the hostname, username, password and database.</code>
+                                <br>LETS ACCESS UPDATE TOOL FROM BROWSER, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
+                                <li>Open the browser and type <strong><code>http://yourdomain.com/pathtoupload/update/index.php</code></strong></li>
+                                <li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
+                                <li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license.</li>
+                                <li>Step 3: Site Config: Please fill in you <strong>Base URL</strong> and select your timezone. <code>You must check the <strong>base url</strong> as update tool can guess it wrong.</code> This is the same base_url that you have in your old spos/config/config.php file
+                                    <ul>
+                                        <li>Base URL for public_html or www/htdocs folder will be <code>http://yourdomain.com/</code> or <code>http://localhost/</code></li>
+                                        <li>Base URL for sub-domain will be <code>http://subdomain.yourdomain.com/</code> </li>
+                                        <li>Base URL for sub-folder will be <code>http://yourdomain.com/subfolder/</code> or <code>http://localhost/subfolder/</code> </li>
+                                        <li>Base URL must not have space and it should end with a trailing slash</li>
+                                    </ul>
+                                </li>
+                                <li>If everything goes smooth, you will be redirect to final page with update complete message.</li>
+                                <li>Remove the install and update folder before start using the Simple POS. If you find any issue with update, please email to support@tecdiary.com</li>
+                            </ol>
+                            <h3>Update Instruction (from 4.0.x to latest)</h3>
+                            <p>Requirements: Apache 2.2+, Mysql 5.4+, PHP 5.3+ </p>
+                            <ol>
+                            </li>
+                            <li>Extract the downloaded file.</li>
+                            <li>Copy Beta v4.0.x/app/config/migration.php, paste and replace the old file in yourinstallationdirectory/app/config/</li>
+                            <li>Copy Beta v4.0.x/themes, paste and replace the old folder in yourinstallationdirectory/</li>
+                            <li>Copy
+                            <ol>
+                            <li>Beta v4.0.x/app/controllers</li>
+                            <li>Beta v4.0.x/app/core</li>
+                            <li>Beta v4.0.x/app/helpers</li>
+                            <li>Beta v4.0.x/app/language</li>
+                            <li>Beta v4.0.x/app/libraries</li>
+                            <li>Beta v4.0.x/app/migrations</li>
+                            <li>Beta v4.0.x/app/models</li>
+                            </ol>
+                             Paste and replace the old folders in yourinstallationdirectory/app/</li>
+                             <li>There is no db change, so you are done.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="set" id="hardware">
+                        <div class="set-description">
+                            <h3>Hardware</h3>
+                            <h4>1. Receipt Printers:</h4>
+                            <p></p>
+                            <p>
+                                We have tested the update V4 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz print plugin that will support these printers
+                            </p>
+                            <ul>
+                                <li>Samsung Bixolon SRP350plus, Bixolon SRP-350II and Bixolon SRP-270.</li>
+                                <li>Telly Dascom 1125 (USB) </li>
+                                <li>Epson Thermal Printer (COM) </li>
+                                <li>Eltron P310i </li>
+                                <li>Zebra GK420, Zebra P310, Zebra LP 2844 and Zebra TLP2844 </li>
+                                <li>Citizen CT-S2000 (USB) </li>
+                                <li>DOS/LPT1 Printing </li>
+                                <li>Print directly to file: i.e. \serverprinter </li>
+                                <li>Nippon Primex </li>
+                                <li>Essae PR-85j </li>
+                                <li>Bematech MP200 </li>
+                            </ul>
+                            <p></p>
+                            <p>
+                                <strong>Bixolon printers will work fine however you might need to change some commands for other printers. Please be informed that we can't provide support regarding any issues with plug-in. You will need to manage it by yourself.</strong>
+                            </p>
+
+                            <h4>2. Barcode Scanners/Readers:</h4>
+                            <p></p>
+                            <p>
+                                Any of the barcode scanners/readers will work fine with v3 as long as it can read accurately.
+                            </p>
+                            <h4>3. Magnetic Card Readers:</h4>
+                            <p></p>
+                            <p>
+                                Most of the Magnetic Card Readers will work fine. We have tested this with <strong>Uniform MSR213 Magnetic Stripe Card Reader</strong> (USB - 3 Track Reader).
+                            </p>
+                            <p>
+                                For tablet/mobile card readers: No such feature and recommendation yet.
+                            </p>
+
+                            <h4>4. Cash Drawers: </h4>
+                            <p></p>
+                            <p>
+                                You should buy the cash drawers that can be connected to pos printer. To use cash drawers, you printer should have the port to connect cash drawer as <strong>Bixolon SRP350II</strong>.
+                            </p>
+                            <p><strong>For Browser Print,</strong> you might need to set your printer to open cash drawer before printing.</p>
+                            <p><strong>For Java QZ Print,</strong> It will be fine as cash drawer will be opened with printing and can be opened without printing.</p>
+
+                            <h4>5. For barcode and label printing:</h4>
+                            <p></p>
+                            <p>
+                                Any desktop laser print will work fine for barcode printing. The label print should work with label printer but the design is very simple and we will not offer any support to customize this. You can customize as you like or hire developer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="set" id="demo">
+                        <div class="set-description">
+                            <h3>Live Demo For Simple POS V3.0 & Beta V4.0</h3>
+
+                            <h4>Demo Link for B4.0: <a href="http://spos.tecdiary.my/" target="_blank">http://spos.tecdiary.my/</a></h4>
+                            <h4>Demo Link for V3.0: <a href="http://spos.tecdiary.my/spos3/" target="_blank">http://spos.tecdiary.my/spos3/</a></h4>
+
+                            <h4>Login Details:</h4>
+                            <div class="smallshow">
+                                <p><pre><strong>Role:               Username                 Password</strong><br><strong>Admin:</strong>              admin@tecdiary.com       12345678<br><strong>Sales staff:</strong>        salesman@tecdiary.com    12345678</pre></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="set" id="credit">
+                        <div class="set-description">
+                            <h3>Credits</h3>
+                            <h4>Thanks to all great people who are developing open source software.</h4>
+                            <ul>
+                                <li><strong>CodeIgniter</strong> - PHP-Framework under <a href="http://www.codeigniter.com/userguide3/license.html">MIT License</a></li>
+                                <li><strong>Ion_auth</strong> - A simple, lightweight authentication library by Ben Edmunds under  the Apache License v2</li>
+                                <li><strong>Bootstrap</strong> - Most popular HTML, CSS, and JS framework under MIT License</li>
+                                <li><strong>jQuery</strong> - A fast, small, and feature-rich JavaScript library under MIT License</li>
+                                <li><strong>Font Awesome</strong> - The iconic font and CSS toolkit under GPL License.</li>
+                                <li><strong>DataTables</strong> - A plug-in for the jQuery under two licenses: GPL v2 license or a BSD (3-point) License</li>
+                                <li><strong>Zend Framework 1</strong> (barcode library) - under New BSD License</li>
+                                <li><strong>Moment.js</strong> - Moment.js is freely distributable under the terms of the MIT license.</li>
+                                <li><strong>Bootstrap-datetimepicker</strong> - Date and Time picker widget based on bootstrap under Apache License V2</li>
+                                <li><strong>iCheck</strong> - Highly customizable checkboxes and radio buttons under MIT License</li>
+                                <li><strong>Accounting.js</strong> -  A tiny JavaScript library for number, money and currency formatting under MIT License</li>
+                                <li><strong>jQuery Cookie</strong> - A simple, lightweight jQuery plugin to manage cookies under MIT License</li>
+                                <li><strong>Commercial Licenses</strong>
+                                    <ul>
+                                        <li>Highcharts</li>
+                                        <li>FormValidator</li>
+                                        <li>Redactor Text Editor</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p></p>
+                            <p><strong>Thanks to all the friends for their suggestions, feedback and help.</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="set" id="faqs">
+                        <div class="set-description">
+                            <h3>Frequently Asked Questions</h3>
+                            <div class="clear"></div>
+                            <div class="faq">
+
+                                <div class="faq-items">
+                                    <ul id="basics" class="faq-group">
+                                        <li class="faq-title"><h4>General</h4></li>
+
+                                        <li>
+                                            <a class="default">How to enable HTTPS support?</a>
+                                            <div class="faq-content">
+                                                <p>You can easily enable https by editing the 2 lines in config file (<code>app/config/config.php</code>) as following:
+                                                    <ol>
+                                                        <li>Update base url from <code>http://yoursite.com</code> to <code>https://yoursite.com</code></li>
+                                                        <li>Set <code>$config['cookie_secure']</code> to TRUE</li>
+                                                    </ol>
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Can I modify the item?</a>
+                                            <div class="faq-content">
+                                                <p>Yes, you can modify the script as per your needs and license.</p>
+                                                <p>
+                                                    We offer <a href="http://codecanyon.net/licenses/terms/regular" target="_blank">Regular License</a> only that allows you to use the Item to create one single End Product for yourself or for one client (a “single application”). If you have more then once clients, you will need to purchase separate license for each client.
+                                                </p>
+                                                <p>
+                                                    You can <a href="http://codecanyon.net/licenses/faq">visit this link to licensing faqs</a> page of Evnato marketplace.
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Can I manage multiple stores?</a>
+                                            <div class="faq-content">
+                                                <p>No, you can only manage 1 store with single installation. If you have more that 1 stores and want to use for all, you will need to purchase separate license for each store.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Can I white label it to have my company name and logo?</a>
+                                            <div class="faq-content">
+                                                <p>Yes, you can. Please update the settings with site name and logo.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">How can I change the receipt layout?</a>
+                                            <div class="faq-content">
+                                                <p>Yes, Please modify the themes/default/views/pos/view.php as you need.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">How can I translate into other language?</a>
+                                            <div class="faq-content">
+                                                <p>You can easily add new languages to Simple POS. Please <a class="scroll-to" href="#language">click here</a> to jump to guide.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Can I install this item on localhost with wamp/xampp/easyphp?</a>
+                                            <div class="faq-content">
+                                                <p>You can install this item on localhost with any web platform xampp, mamp, lamp, wamp or easyphp. Internet connectivity is required for installation to verify the purchase. Once installed, you can use it without Internet.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Does it supports my barcode scanner/receipt printer/magnetic card reader?</a>
+                                            <div class="faq-content">
+                                                <p>Please <a href="#hardware">click here</a> to jump to hardware section.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Will I get the full source code?</a>
+                                            <div class="faq-content">
+                                                <p>Yes, you will get 100% source code including php, js, html and css.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Are you using a PHP Framework for this item?</a>
+                                            <div class="faq-content">
+                                                <p>Yes, <strong>CodeIgniter</strong> – PHP Framework created by EllisLab and is now a project of the British Columbia Institute of Technology.</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">How do Simple POS track inventory?</a>
+                                            <div class="faq-content">
+                                                <p>
+                                                    Products quantity will automatically decreased upon sale and increased on adding purchase. You even can edit the product to change the quantity.
+                                                </p>
+
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">Why I can sell the products even if I don't have quantity?</a>
+                                            <div class="faq-content">
+                                                <p>Once you add the product to order list, the item color will be red if you don't have quantity for the product. But Simple POS allows you sale items even if you don't have quantity and will set the quantity to negative.
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="default">What is the difference between inclusive and exclusive tax on add product page?</a>
+                                            <div class="faq-content">
+                                                <p>
+                                                    Inclusive tax method means that tax is already included in the price. Exclusive tax method means that tax is not included in the price and should be calculated/added separately.
+                                                </p>
+                                                <p>For example:<br>
+                                                    <code>Product Price 100 and Tax 10%<br>
+                                                        Inclusive tax method: Price 90.91 and Tax amount: 9.09 = 100 (total price with tax)<br>
+                                                        Exclusive tax method: Price 100 and Tax amount: 10 = 110 (total price with tax)</code>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Where are the header and footer view files?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        The header and footer files are in <code>themes/default/views/</code>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">How can I change Quick Cash buttons?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Please modify the app_lang.php in app/language/english/. If you are not using English then see the file in app/language/yourLanguageFolder/
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why POS brings me to Java page OR my browser keep blocking the Java?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        If you have enable the Java applet and added your domain to Exception Site List as said in the POS settings page.
+                                                    </p>
+                                                    <p>
+                                                        <ul>
+                                                            <li>You are being redirect to Java page, please download the new Java installer and install it.</li>
+                                                            <li>Your browser blocking the Java applet even is you have already added the domain to Java Exception Site List, please allow it in your browser.</li>
+                                                            <li>Your get qz plug-in not loaded error message, please check if the browser is not blocking the Java. Restoring the security prompts in Java Security might help. </li>
+                                                            <li>Browser keep loading the page and never stop, your java is stop responding, please open task manage and kill jp2launcher.exe/Java/Plugin Container and reload the page. If still same, please Restoring Security Prompts in Java Security settings.</li>
+                                                        </ul>
+                                                    </p>
+                                                    <p class="bold">
+                                                        You think, this is giving too much trouble, please disable the Java applet in settings and let browser handle printing.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why barcode images are not showing on print barcode and label page?</a>
+                                                <div class="faq-content">
+                                                    <p>Please check that ini_set function is not disabled. The ini_set function should be enabled to use barcode feature.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">How does discount applied to the products and order?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        <strong>Product level discount</strong> will be applied on the product price before any tax calculation.<br>
+                                                        <code>i.e, Product Price - Product Discount + Product Tax (product tax calculated on Product Price - Product Discount)</code>
+                                                    </p>
+                                                    <p>
+                                                        <strong>Order level discount </strong>will be applied on the order total (total + product price) before any order tax calculation.<br>
+                                                        <code>i.e, Order Total - Order Discount + Order Tax (order tax calculated on Order Total - Order Discount)</code>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="cd-faq-trigger" href="#">Can I disable print dialog after submitting the sale on POS?</a>
+                                                <div class="cd-faq-content">
+                                                    <p>
+                                                        <strong>Yes, by modifying a line of code</strong>, please open themes/default/views/pos/view.php and search for <code>window.print();</code> remove/comment it to disable print dialog.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="cd-faq-trigger" href="#">Can I auto redirect back to POS after submitting the sale on POS?</a>
+                                                <div class="cd-faq-content">
+                                                    <p>
+                                                        <strong>Yes, by modifying a line of code</strong>, please open app/controllers/pos.php and search for <code>redirect("pos/view/" . $sale['sale_id']);</code> replace it with <code>redirect("pos");</code> Now after sale, system will redirect you back to POS instead of view receipt page.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+
+                                        <ul id="account" class="faq-group">
+                                            <li class="faq-title"><h4>Account and Users</h4></li>
+                                            <li>
+                                                <a class="default">What type of account are available?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        These are the account type
+                                                        <ol>
+                                                            <li>Admin</li>
+                                                            <li>Sales Staff</li>
+                                                        </ol>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">I am Admin and how do I reset the password for sales staff user?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Please visit list user and edit the user to reset the password.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">How do I delete account?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        If you want to delete account for staff member, please visit list users sub menu under people main menu. All the account are listed on this page and you can delete any of them.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <ul id="payments" class="faq-group">
+                                            <li class="faq-title"><h4>Payments</h4></li>
+
+                                            <li>
+                                                <a class="default">What payment gateways are available in Simple POS?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Only Stripe payment gateway is available for processing credit cards in their supported countries. You can check <a href="https://stripe.com" target="_blank">https://stripe.com</a>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why Stripe payment take long time?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        API calls to server could take few seconds as the payment is processed after submit.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Will you be adding more payment gateways?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Yes, we will be exploring the new gateways.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                        <ul id="errors" class="faq-group">
+                                            <li class="faq-title"><h4>Error</h4></li>
+                                            <li>
+                                                <a class="default">Why am I getting CloudFlare Security or Blank error on verfication while installating the item?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        If you are not getting any error but blank red alert or CloudFlare Security error mean your request is no reaching to verification server. Please check that you server is not blocking the curl request and secondly there are chances that CloudFlare might be challenging your request due to various reasons. Please check with your host and request them to white list CloudFlare ips <a href="https://www.cloudflare.com/ips" target="_blank">https://www.cloudflare.com/ips</a>
+                                                    </p>
+                                                    <p>
+                                                        Updating your Anti-Virus and Browser might help. You can check with your host too.
+                                                    </p>
+                                                    <p>
+                                                        You can try different host and/or install it locally with any web platform <strong>easyphp/lamp/mamp/wamp/xampp</strong>.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why I am getting "no input specified" error after install/update?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Please add the ? 'question sign' after index.php in the .htaccess file, you line will be look as <code>RewriteRule ^(.*)$ /index.php?$1 [L]</code>code.
+                                                    </p>
+                                                    <p>
+                                                        For more information, please visit <a href="https://github.com/bcit-ci/CodeIgniter/wiki/Godaddy-Installation-Tips" target="_blank">this guide page</a>.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why the installer/update tool is locked?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        After successfully installation/update, the installer/update tool will be automatically locked.
+                                                    </p>
+                                                    <p>
+                                                        If you having any issue after installation or like to perform the installation again, please upload the files again.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why am I getting 404/500 error page after installation?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Please
+                                                        <ol>
+                                                            <li>make sure that your apache mod_rewite is enabled</li>
+                                                            <li>check that .htaccess file is successfully uploaded and exists in the main directory of installation</li>
+                                                            <li>base_url in app/config/config.php</li>
+                                                            <li>check your database settings in app/config/database.php</li>
+                                                            <li>check your folders/files permissions (folders should have 755 and files should have 644 permissions).</li>
+                                                        </ol>
+                                                    </p>
+                                                    <p>
+                                                        If you are using godaddy, please visit the codeigniter official guide <a href="https://github.com/bcit-ci/CodeIgniter/wiki/Godaddy-Installation-Tips" target="_blank">here</a>. You might need to check and modify you .htaccess files too.
+                                                    </p>
+                                                    <p>
+                                                        You can always check your error log to get more information about the issue.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why sale time is different from my computer time?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        The time with Javascript and PHP could be different as javascript use your computer time but php will use your server time.
+                                                    </p>
+                                                    <p>
+                                                        Please check your timezone in index.php and make sure that you have set the correct time zone. You can find your timezone at <a href="http://php.net/manual/en/timezones.php" target="_blank">http://php.net/manual/en/timezones.php</a>
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why I can't send emails?</a>
+                                                <div class="faq-content">
+                                                    <p>We have tested the email function on different hosting servers. Please check with your host about this and if you need to check the code that will be in app/libraries/tec.php and look for <code>send_email()</code></p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why I can't login and getting time out error?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Timeout feature has been enabled. The user will be timed out after 3 unsuccessful login attempts for 10 minutes. You can disabled this in app/config/ion_auth.php by changing the
+
+                                                        <code>$config['track_login_attempts'] = TRUE;</code>
+                                                        to
+                                                        <code>$config['track_login_attempts'] = FALSE;</code>
+                                                        or you can increase the attempts from 3 to any number you like.
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why I can't upload any file?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        This could be due to permission on the /uploads. Please set 777 permission to /uploads and all other folder in the /uploads/
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Why I getting db error and can't login?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Please check your db configuration in app/config/database.php
+                                                    </p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="default">Can I use this on Windows server with IIS?</a>
+                                                <div class="faq-content">
+                                                    <p>
+                                                        Yes but we haven't tested this and don't provide any support for setup.
+                                                    </p>
+                                                    <p>
+                                                        If URL Rewrite module is not installed, please install it from here <a href="http://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">http://www.iis.net/downloads/microsoft/url-rewrite</a>. Please check the complete web.config file. Place this in the main installation folder where the index.php is placed.
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;rewrite&gt;
+            &lt;rules&gt;
+                &lt;rule name=&quot;Imported Rule 1&quot; stopProcessing=&quot;true&quot;&gt;
+                    &lt;match url=&quot;^(.*)$&quot; ignoreCase=&quot;false&quot; /&gt;
+                    &lt;conditions logicalGrouping=&quot;MatchAll&quot;&gt;
+                        &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsDirectory&quot; negate=&quot;true&quot; /&gt;
+                        &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsFile&quot; negate=&quot;true&quot; /&gt;
+                    &lt;/conditions&gt;
+                    &lt;action type=&quot;Rewrite&quot; url=&quot;index.php?url={R:1}&quot; appendQueryString=&quot;true&quot; /&gt;
+                &lt;/rule&gt;
+            &lt;/rules&gt;
+        &lt;/rewrite&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;</code></pre>
+                                                        </p>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <a class="default">Can I use this with NGINX?</a>
+                                                    <div class="faq-content">
+                                                        <p>
+                                                            Yes but we haven't tested this and don't provide any support for setup.
+                                                        </p>
+                                                        <p>
+                                                            You can follow the guide <a href="http://wiki.nginx.org/Codeigniter" target="_blank">http://wiki.nginx.org/Codeigniter</a>. Your nginx.conf file will look like this.
+<pre><code>server {
+    server_name domain.tld;
+
+    root /var/www/codeignitor;
+    index index.html index.php;
+
+    # set expiration of assets to MAX for caching
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+        expires max;
+        log_not_found off;
+    }
+
+    location / {
+    # Check if a file or directory index file exists, else route it to index.php.
+    try_files $uri $uri/ /index.php;
+    }
+
+    location ~* \.php$ {
+    fastcgi_pass 127.0.0.1:9000;
+    include fastcgi.conf;
+    }
+
+    location ~ /files {
+    deny all;
+    return 404;
+    }
+}</code></pre>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class="default">Why some products are missing from order when I add 100+ products?</a>
+                                    <div class="faq-content">
+                                        <p>
+                                            There is no restriction in Simple POS on the number of order items. If you are having such issue, please check your php configuration file (php.ini) for <code>max_input_vars</code> and set it to higher number i.e, 10000.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class="default">Why Wordpress showing 404 page when I access the Simple POS?</a>
+                                    <div class="faq-content">
+                                        <p>
+                                            You can exclude sub-directory from RewriteRule of wordpress by adding the line below to your .htaccess file in main directory of wordpress.
+                                            <pre><code>RewriteCond %{REQUEST_URI} !^/(mydir|mydir/.*)$</code></pre>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="set" id="guide">
+        <div class="set-description">
+            <h3>User Guide</h3>
+            <img src="images/pos.png" alt="SimplePOS" class="img-responsive img-thumbnail"><br><br>
+            <img src="images/db.png" alt="SimplePOS" class="img-responsive img-thumbnail"><br><br>
+            <img src="images/add_product.png" alt="SimplePOS" class="img-responsive img-thumbnail"><br><br>
+            <img src="images/sales.png" alt="SimplePOS" class="img-responsive img-thumbnail"><br><br>
+            <img src="images/report.png" alt="SimplePOS" class="img-responsive img-thumbnail"><br><br>
+            <img src="images/settings.png" alt="SimplePOS" class="img-responsive img-thumbnail">
+
+        </div>
+    </div>
+
+    <div class="set" id="others">
+        <div class="inner-set" id="language">
+            <div class="set-description">
+                <h3>Adding Language</h3>
+                <p>Guide to add new language.
+                    <ul>
+                        <li>Please create new folder in app/language/ and name it <code>yourlanguagename</code></li>
+                        <li>Folder name should be without space and all lower letters.</li>
+                        <li>Copy all the files from app/language/english/ and paste then to app/language/<code>yourlanguagename</code>/</li>
+                        <li>Now you can translate these all file to your language</li>
+                        <li>Download flag image (format: png, width: 16px, height: 11px) and paste it in themes/default/assets/images/</li>
+                        <li>You can add new key to language array. (See Code Section)</li>
+                    </ul>
+                </p>
+                <p>
+                    Please replace the <code>yourlanguagename</code> with your language For example, spanish, french, chinese etc
+                </p>
+            </div>
+            <div class="set-dev">
+
+                <p>To add select option in setting's language</p>
+                <p>Please open <code>themes/<strong>default</strong>/views/settings/index.php</code> and search for ( <code>$available_lang =</code> ) You can replace the <code><strong>default</strong></code> with your theme if you are using different theme. You can add new array key for your language as following:<br><br></p>
+                <pre><code>$available_lang = array(<br>       'english' => 'English', <br>        'yourlanguagename' => 'Your Language Name', <br>        );</code></pre>
+                <p><code>yourlanguagename</code> must be same folder name that you created in app/language/</p>
+                <p><strong>If you are getting the error "<code>Unable to load the requested language file: language/yourlanguagename/form_validation_lang.php or calendar_lang.php</code>" Then you will need to add your language in lib/language/ as you did above for app/language/ and translate the system language files to your language.</strong></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="set">
+        <div class="inner-set" id="add_column">
+            <div class="set-description">
+                <h3>Add/Remove column to table</h3>
+                <p>Here are the steps to follow</p>
+                <p><strong>To add a column you will need to</strong></p>
+                <ol>
+                    <li>Modify the select statement and select the desired column, in the controller.</li>
+                    <li>Add new element to datatables columns (should be in sequence) in the relative view file.</li>
+                    <li>Lastly add the th tag with column heading to table head (should be in sequence).</li>
+                </ol>
+                <p><strong>To remove a column you will need to</strong></p>
+                <ol>
+                    <li>Modify the select statement and remove the desired column, in the controller.</li>
+                    <li>Remove the element form columns of datatables in the relative view file.</li>
+                    <li>Lastly Remove the th tag with column heading to table head.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="set">
+        <div class="inner-set" id="datatable">
+            <div class="set-description">
+                <h3>Sorting Tables</h3>
+                <p>We have used datatables library for all listing tables. If you need to change any table sorting column, you will need to modify the view file.</p>
+                <p>
+                    The first column of the table will start from index 0 and then increase 1 with each columns. Let say you want to sort the table with 4th column then you will need to use index 3 as <code>"aaSorting": [[3, "asc"]],</code>
+                </p>
+                <p>
+                    You can change the sorting for any table by modifying the files as described here.
+                </p>
+
+            </div>
+            <div class="set-dev">
+                <p>
+                    For example, if you need to change the sorting for customers, you will need to edit the /theme/default/customers/index.php and search
+                </p>
+                <pre><code>"aaSorting": [[0, "asc"]],</code></pre>
+                <p>This is being sorted for first table column, If you want to sort it by id (2nd table column) then you will need to change as </p>
+                <pre><code>"aaSorting": [[1, "asc"]],</code></pre>
+                <p>You even can sort the table with multiple columns as </p>
+                <pre><code>"aaSorting": [[0, "asc"], [1, "asc"]],</code></pre>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="set">
+        <div class="inner-set" id="barcode">
+            <div class="set-description">
+                <h3>Barcodes and Labels</h3>
+                <p>Barcode page is designed to be printed with desktop laser printers. Barcode sheet or barcode pages have 2 columns' table (2 product per row and medium barcode image with 60px height). For labels, each label will be printed on different page as most of you will print label with label printers. We don't provide any support for modify the design.</p>
+                <p>
+                    If you need to modify any of the barcode/label page to show/remove any information, you can do so by modify the products controller. The functions are mentioned that handle the pages.
+                </p>
+
+            </div>
+            <div class="set-dev">
+                <p>
+                    Functions/Methods handling the barcodes and labels pages are
+                    <ul class="s-ul">
+                        <li><code class="white">single_barcode()</code> - Handles barcode printing for single products</li>
+                        <li><code class="white">single_label()</code> - Handles label printing for single products</li>
+                        <li><code class="white">print_barcodes()</code> - Handles barcode printing for multiple products based on category</li>
+                        <li><code class="white">print_lables()</code> - Handles label printing for multiple products based on category</li>
+                    </ul>
+                </p>
+                <p>File: <code>app/controllers/products.php</code></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="set">
+        <div class="inner-set" id="support">
+            <div class="set-description">
+                <h3>Request Installation</h3>
+                <p>
+                    We will provide the service to install the item for $10 To request the installation, please send $10 to saleem@tecdiary.com by Paypal or Skrill and email us your license file and hosting control panel details with reference of your payment to support@tecdiary.com
+                </p>
+            </div>
+
+            <div class="set-description">
+                <h3>Request Update</h3>
+                <p>
+                    We will provide the service to update the item from v3 for $20 To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and email us your license file, v3 installation path/link with login details and hosting control panel details with reference of your payment to support@tecdiary.com
+                </p>
+            </div>
+
+            <div class="set-description">
+                <h3>Custom Modifications</h3>
+                <p>
+                    Yes, we do provide customization services to modify/enhance the item functionality to suit your needs. We charge $30 per hour. Please email to saleem@tecdiary.com to check availability, estimated cost and time.
+                </p>
+            </div>
+
+            <div class="set-description">
+                <h3>Feature Request</h3>
+                <p>Yes, we would love to listen your requests/feedback. Please prepare the details with examples before emailing to saleem@tecdiary.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    $('body').scrollspy({ target: '#sidebar-wrapper', offset: 80 })
+    $(".scroll-to").click(function(e) {
+        e.preventDefault();
+        var did = $(this).attr('href');
+        console.log(did);
+        $('html,body').animate({
+        scrollTop: (($(did).offset().top)-50)},
+        'slow');
+    });
+</script>
+
+</body>
+
+</html>

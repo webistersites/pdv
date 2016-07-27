@@ -1,0 +1,191 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+body{
+    font-size: 16px;
+    line-height: 1.5em;
+    position: relative;
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #dd4814;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    padding-top: 80px !important;
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #ae3910;
+}
+
+.sidebar-nav .active {
+    text-decoration: none;
+    color: #fff;
+    background: #ae3910;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #ae3910;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+.sidebar-nav.nav > li > a {
+    padding: 0 5px;
+}
+
+.br0 {
+    border-radius: 0;
+}
+
+.bg-black {
+    background: #000;
+    border-color: #000;
+}
+
+.navbar-default {
+    background-color: #dd4814;
+    border-color: #dd4814;
+}
+
+.navbar-nav > li > a {
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 20px;
+}
+
+.jumbotron .well {
+    margin-bottom: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+.set {
+    margin: 0 -35px 10px -40px;
+    padding: 20px 40px;
+    background: #fff;
+}
+.set:nth-child(even) {
+    background: #F5F5F5;
+    border-bottom: 1px solid #EEE;
+}
+.faq-group li {
+    list-style: none;
+}
+.faq-group li li {
+    list-style: disc;
+}
+a.default {
+    cursor: default;
+    text-decoration: none;
+    font-weight: bold;
+}
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 80px 20px 20px 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
