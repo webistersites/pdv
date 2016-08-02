@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $page_title.' | '.$Settings->site_name; ?></title>
-    <link rel="shortcut icon" href="<?= $assets ?>images/icon.png"/>
+    <link rel="shortcut icon" href="<?= $assets ?>images/favicon.png"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href="<?= $assets ?>bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="<?= $assets ?>plugins/iCheck/square/green.css" rel="stylesheet" type="text/css" />
+    <link href="<?= $assets ?>plugins/iCheck/square/yellow.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>plugins/select2/select2.min.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
     <link href="<?= $assets ?>dist/css/custom.css" rel="stylesheet" type="text/css" />
     <script src="<?= $assets ?>plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
 </head>
-<body class="skin-green fixed sidebar-mini">
+<body class="skin-yellow fixed sidebar-mini">
 <div class="wrapper">
 
     <header class="main-header">
@@ -61,7 +61,7 @@
                     <li>
                         <a href="<?= site_url('reports/alerts'); ?>">
                             <i class="fa fa-bullhorn"></i>
-                            <span class="label label-warning"><?= $qty_alert_num; ?></span>
+                            <span class="label label-danger"><?= $qty_alert_num; ?></span>
                         </a>
                     </li>
                     <?php } ?>
@@ -69,7 +69,7 @@
                     <li class="dropdown notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning"><?=sizeof($suspended_sales);?></span>
+                            <span class="label label-danger"><?=sizeof($suspended_sales);?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="header"><?=lang('recent_suspended_sales');?></li>

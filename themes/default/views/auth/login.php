@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title><?= $page_title.' | '.$Settings->site_name; ?></title>
-    <link rel="shortcut icon" href="<?= $assets ?>images/icon.png"/>
+    <link rel="shortcut icon" href="<?= $assets ?>images/favicon.png"/>
     <script type="text/javascript">if (parent.frames.length !== 0) { top.location = '<?=site_url('login')?>'; }</script>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link href="<?= $assets ?>bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <link href="<?= $assets ?>plugins/iCheck/square/green.css" rel="stylesheet" type="text/css" />
 </head>
-<body background="themes/default/assets/images/background2.jpg">
+<body background="themes/default/assets/images/background3.jpg">
     <div class="login-box">
         <div class="login-logo">
             <a href="<?=base_url();?>"><?= $Settings->site_name == 'PDV' ? '<b>PDV</b>' : '<img src="'.base_url('uploads/'.$Settings->logo).'" alt="'.$Settings->site_name.'" />'; ?></a>
@@ -30,8 +30,8 @@
             <p class="login-box-msg"><?= lang('login_to_your_account'); ?></p>
             <?= form_open("auth/login"); ?>
             <div class="form-group has-feedback">
-                <input type="email" name="identity" value="<?= set_value('identity'); ?>" class="form-control" placeholder="<?= lang('email'); ?>" />
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <input type="text" name="identity" value="<?= set_value('identity'); ?>" class="form-control" placeholder="<?= lang('username'); ?>" />
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
                 <input type="password" name="password" class="form-control" placeholder="<?= lang('password'); ?>" />

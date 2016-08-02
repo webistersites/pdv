@@ -1,4 +1,5 @@
 <?php (defined('BASEPATH')) OR exit('No direct script access allowed'); ?>
+
 <div class="modal-dialog modal-success">
     <div class="modal-content">
         <div class="modal-header">

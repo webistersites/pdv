@@ -642,6 +642,11 @@ class Pos extends MY_Controller {
 		$this->load->view($this->theme . 'pos/shortcuts', $this->data);
 	}
 
+	function mesa()
+	{
+		$this->load->view($this->theme . 'pos/mesa', $this->data);
+	}
+
 	function view_bill()
     {
         $this->load->view($this->theme . 'pos/view_bill', $this->data);
