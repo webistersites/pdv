@@ -18,7 +18,7 @@
 	<link href="<?= $assets ?>dist/css/custom.css" rel="stylesheet" type="text/css" />
 	<script src="<?= $assets ?>plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
 </head>
-<body class="skin-yellow sidebar-collapse sidebar-mini pos">
+<body class="skin-blue sidebar-collapse sidebar-mini pos">
 	<div class="wrapper">
 
 		<header class="main-header">
@@ -49,7 +49,7 @@
 						<?php if($Admin) { ?>
 						<li><a href="<?= site_url('settings'); ?>"><i class="fa fa-cogs"></i></a></li>
 						<?php } ?>
-						<li><a href="<?= site_url('pos/mesa'); ?>" data-toggle="ajax"><i class="fa fa-cutlery"></i></a></li>
+						<!-- <li><a href="<?= site_url('pos/mesa'); ?>" data-toggle="ajax"><i class="fa fa-cutlery"></i></a></li> -->
 						<li><a href="<?= site_url('pos/view_bill'); ?>" target="_blank"><i class="fa fa-file-text-o"></i></a></li>
 						<li><a href="<?= site_url('pos/shortcuts'); ?>" data-toggle="ajax"><i class="fa fa-key"></i></a></li>
 						<li><a href="<?= site_url('pos/register_details'); ?>" data-toggle="ajax"><?= lang('register_details'); ?></a></li>

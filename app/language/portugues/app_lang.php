@@ -47,7 +47,7 @@ $lang['staff']                  			= "Vendedor";
 
 $lang['pos']                                = "PDV";
 $lang['home']                               = "Principal";
-$lang['dashboard']                          = "Dashboard";
+$lang['dashboard']                          = "Painel";
 $lang['users']                              = "Usuários";
 $lang['list_users']                         = "Lista de Usuários";
 $lang['add_user']                           = "Adicionar Usuários";

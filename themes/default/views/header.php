@@ -18,7 +18,7 @@
     <link href="<?= $assets ?>dist/css/custom.css" rel="stylesheet" type="text/css" />
     <script src="<?= $assets ?>plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
 </head>
-<body class="skin-yellow fixed sidebar-mini">
+<body class="skin-blue fixed sidebar-mini">
 <div class="wrapper">
 
     <header class="main-header">
