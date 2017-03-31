@@ -23,7 +23,7 @@
 
 		<header class="main-header">
 			<a href="<?= site_url(); ?>" class="logo">
-				<span class="logo-mini"><?= $Settings->site_name == 'PDV' ? '<b>PDV</b>' : '<img src="'.base_url('assets/uploads/'.$Settings->logo1).'" alt="'.$Settings->site_name.'" />'; ?></span>
+				<span class="logo-mini">PDV</span>
 				<span class="logo-lg"><?= $Settings->site_name == 'PDV' ? '<b>PDV</b>' : '<img src="'.base_url('assets/uploads/'.$Settings->logo).'" alt="'.$Settings->site_name.'" />'; ?></span>
 			</a>
 			<nav class="navbar navbar-static-top" role="navigation">
