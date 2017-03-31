@@ -44,8 +44,8 @@
 
             <div class="">
                 <p>&nbsp;</p>
-                <p><span class="text-danger"><?= lang('forgot_your_password'); ?></span><br>
-                    <?= lang('dont_worry'); ?> <a href="#" class="text-danger" data-toggle="modal" data-target="#myModal"><?= lang('click_here'); ?></a> <?= lang('to_reset'); ?> </p>
+                <p><span class="text-danger"><?= lang('forgot_your_password');  ?><a href="#" class="text-danger" data-toggle="modal" data-target="#myModal"><?= lang('click_here'); ?></a></span><br>
+                    <?= lang('dont_worry'); ?> <!-- <a href="#" class="text-danger" data-toggle="modal" data-target="#myModal"><?= lang('click_here'); ?></a> <?= lang('to_reset'); ?> --> </p>
 
                 </div>
 
